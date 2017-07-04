@@ -1,0 +1,99 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- #BeginEditable "doctitle" -->
+		<title>Survey on Construction Noise</title>
+		<!-- #EndEditable -->
+		<link href="css/choicestyles.css" rel="stylesheet" type="text/css" media="screen">	
+	</head>
+
+	<body onload=playbg()>
+		
+	<div id="wrapper">	
+		<div id="top">
+			<span class="mewr"><img src="images/logo_with_text.png" /></span>
+			<span class="anu"><img src="images/ANU_logo.svg.png" /></span>		
+		</div>			
+		<div id="content">	
+		
+			<!-- #BeginEditable "header" -->
+		
+			<h1>Valuing Construction Noise in the Day</h1>
+			
+			<!-- #EndEditable -->
+			
+			<p>Please select the option you prefer the most.</p>
+
+			<div id="time"><!-- #BeginEditable "image" --><img src="images/Picture1.gif"><!-- #EndEditable -->
+				<!-- #BeginEditable "table" -->
+				<table>
+					<tr>
+						<th>Option</th>
+						<th>Monthly Fee</th>
+						<th>Choice</th>
+					</tr>
+					<tr onmouseover=playopt1() onmouseout=playbg()>
+						<td>Alternative A</td>
+						<td>$10</td>
+						<td><input type="radio" name="q1" value="yes"><br> </td>
+					</tr>
+					<tr onmouseover=playopt2() onmouseout=playbg()>
+						<td>Alternative B</td>
+						<td>$15</td>
+						<td><input type="radio" name="q1" value="yes"></td>
+					</tr>
+					<tr>
+						<td>Current Situation</td>
+						<td>$0</td>
+						<td><input type="radio" name="q1" value="yes"></td>
+					</tr>
+				</table>
+			<!-- #EndEditable -->
+			</div>
+			<br>
+		</div>
+
+		<!-- #BeginEditable "Sounds" -->
+
+		<div id="edit">
+			<audio id="background" src="sounds/noisel15vol90.wav" loop="loop"></audio>
+	
+			<audio id="option1" src="sounds/noiseh05vol60.wav" loop="loop"></audio>
+	
+			<audio id="option2" src="sounds/noisel05vol60.wav" loop="loop"></audio>
+		</div>
+		<!-- #EndEditable -->
+		<div id="footer">
+			<!-- #BeginEditable "footer" -->
+			<p>
+			<a href="info.html">Next</a></p>
+		<!-- #EndEditable -->
+		</div>
+		
+		<script>
+			function playbg(){
+				var audio = document.getElementById("background"); audio.play();
+				var audio1 = document.getElementById("option1"); audio1.pause();
+				var audio2 = document.getElementById("option2"); audio2.pause();
+			}
+		</script>
+		
+		<script>
+			function playopt1(){
+				var audio = document.getElementById("option1"); audio.play();
+				var audiobg = document.getElementById("background"); audiobg.pause();
+				var audio2 = document.getElementById("option2"); audio2.pause();
+			}
+		</script>
+
+		<script>
+			function playopt2(){
+				var audio = document.getElementById("option2"); audio.play();
+				var audiobg = document.getElementById("background"); audiobg.pause();
+				var audio1 = document.getElementById("option1"); audio1.pause();
+			}
+		</script>
+		
+	</div>
+	</body>
+
+</html>
