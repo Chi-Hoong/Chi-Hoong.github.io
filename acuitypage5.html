@@ -1,0 +1,57 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- #BeginTemplate "acuitypage2.dwt" -->
+	<head>
+		<title>Survey on Construction Noise</title>
+		<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">	
+	</head>
+
+	<body onload=playbg()>
+	<div id="wrapper">	
+		<div id="top">
+			<span class="mewr"><img src="images/logo_with_text.png" /></span>
+			<span class="anu"><img src="images/ANU_logo.svg.png" /></span>		
+		</div>	
+		
+		<div id="content" onclick=next(); style="cursor: pointer;">
+			<div id="box2">
+				<h1>The sound is now playing<br>Click on this box when you hear a sound</h1>
+			</div>
+		</div>
+		
+		<!-- #BeginEditable "sound" -->
+
+		<div id="edit">
+			<audio id="background" src="sounds/test2000.wav" loop="loop"></audio>
+		</div>
+		
+		<!-- #EndEditable -->
+
+		<script  type="text/javascript">
+			function playbg(){
+				var audio = document.getElementById("background"); audio.play();
+				var startTime = new Date();
+			}
+		</script>
+		
+		<script>
+			function exit(){
+				var endTime = new Date();
+				var timeSpent=(endTime - startTime);
+			}
+		</script>
+		
+		<!-- #BeginEditable "link" -->
+
+		<script>
+			function next(){
+				window.location.href='acuitypage6.html';
+			}
+		</script>
+
+		<!-- #EndEditable -->
+
+
+	</div>
+	</body>
+<!-- #EndTemplate -->
+</html>

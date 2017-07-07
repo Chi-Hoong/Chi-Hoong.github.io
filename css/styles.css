@@ -52,20 +52,24 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin:0 30px;
 }
 
+#content em {
+	font-weight:bold; font-style:normal;
+}
+
 #content #box1 {
 	padding:70 40px; border: 3px #009933 solid; margin:0 auto; text-align:center
 }
 
-#content #box1 a {
-	color:#009933; text-decoration:none
+#content #box1 h1 {
+	color:#009933; text-decoration:none; font-weight:normal;
 }
 
 #content #box2 {
 	padding:70 40px; border: 3px #FF0000 solid; margin:0 auto; text-align:center
 }
 
-#content #box2 a {
-	color:#FF0000; text-decoration:none
+#content #box2 h1 {
+	color:#FF0000; text-decoration:none; font-weight:normal;
 }
 
 #content form ul {
