@@ -72,6 +72,37 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	color:#FF0000; text-decoration:none; font-weight:normal;
 }
 
+#content #ascend {
+	padding:70 40px; border: 3px #FF0000 solid; margin:0 auto; text-align:center
+}
+
+#content #ascend h1 {
+	color:#FF0000; text-decoration:none; font-weight:normal;
+}
+
+#content #descend {
+	padding:70 40px; border: 3px #FF0000 solid; margin:0 auto; text-align:center
+}
+
+#content #descend h1 {
+	color:#FF0000; text-decoration:none; font-weight:normal;
+}
+
+#content #pause {
+	float:left ;width:30%; padding:10px; border: 1px #555 solid; margin-top:10px; text-align:center; 
+	text-decoration:none; font-weight:normal; color:#000
+}
+
+#content #pause a {
+	text-decoration:none; font-weight:normal; color:#000
+}
+
+
+#playlist {
+	list-style: none;
+}
+
+
 #content form ul {
 	list-style-type:none
 }
