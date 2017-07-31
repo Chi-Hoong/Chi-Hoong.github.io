@@ -33,7 +33,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 #content {
-	width:760px; margin:20 20 20 20px
+	width:760px; margin:20 20 20 20px; clear;
 }
 
 #content h1 {
@@ -77,59 +77,44 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 #content #demopause {
-	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
+	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #555 solid; text-align:center; opacity:0.93;
 	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:20%; background-color:#fff;
 }
 
 #content #demopause a {
-	text-decoration:none; color:#FF0000; 
+	text-decoration:none; color:#000; font-weight:bold; 
 }
 
 #content #pause {
-	margin-left:280px; float:left; width:200px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
+	margin-left:280px; float:left; width:200px; padding:10px; border: 3px #555 solid; text-align:center; opacity:0.93;
 	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:70%; background-color:#fff;
 }
 
 #content #pause a {
-	text-decoration:none; font-weight:normal; color:#FF0000
+	text-decoration:none; font-weight:normal; color:#000
 }
 
-
-#footer p {
-	font-size:24px; margins:30px; float:right; 
+#footer p #back {
+	font-size: 24px; float: left; clear: left; cursor: pointer; text-decoration: underline; margin-left:20px
 }
 
-#footer p a {
+#footer p #back {
 	color:#000; padding:20px; background-color:#ddd;
 }
 
-#footer p a:hover {
-	color:#fff; background-color:#333; padding:20px;
-
+#footer p #back:hover {
+	color:#fff; background-color:#333; 
 }
 
-#footer #back p {
-	font-size:24px; margins:30px; float:left; 
+#footer p #exit {
+	font-size:24px; float:right; padding:20px; cursor:pointer;
 }
 
-#footer #back p a {
+#footer p #exit a {
 	color:#000; padding:20px; background-color:#ddd;
 }
 
-#footer #back p a:hover {
-	color:#fff; background-color:#333; padding:20px;
-
-}
-
-#footer #exit p {
-	font-size:24px; margins:30px; float:right; 
-}
-
-#footer #exit p a {
-	color:#000; padding:20px; background-color:#ddd;
-}
-
-#footer #exit p a:hover {
-	color:#fff; background-color:#333; padding:20px;
+#footer p #exit a:hover {
+	color:#fff; background-color:#333; padding:20px; 
 
 }
