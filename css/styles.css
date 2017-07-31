@@ -94,7 +94,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 #content #pause a {
-	text-decoration:none; font-weight:normal; color:#000
+	text-decoration:none; font-weight:normal; color:#FF0000
 }
 
 #playlist {
