@@ -14,6 +14,8 @@
 			<div id="time"><img src="images/Picture1.gif"></div>
 		
 			<div id="demopause">
+				<p>You can proceed to the next page after the sound has ended</p>
+				<br>
 				<p><a href="pause.html">Click here to pause or terminate the survey.</a></p>
 			</div>
 		</div>
@@ -34,6 +36,13 @@
 		$("document").ready(function() {
 			_player.play()
 		});
+		
+		$("#footer").hide()
+		
+		_player.onended=function () {
+			$("#footer").show()
+		}
+
 	</script>
 		
 		

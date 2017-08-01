@@ -82,7 +82,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 #content #demopause a {
-	text-decoration:none; color:#FF0000; 
+	color:#FF0000; 
 }
 
 #content #pause {
