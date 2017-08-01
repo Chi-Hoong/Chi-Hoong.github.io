@@ -60,34 +60,20 @@
 		var loopcount=0
 		var loopbreak=0
 		
-		descend(i)
 		_player.src=soundlist[i];
 		_player.play();
-        i += 1;
+		
+		_player.onended=function () {
+			i += 1;
+			_player.src=soundlist[i];
+			_player.play()
+		}
 		
 		$(document).on("click", "#ascend", function() {
 			// alert("You have clicked on sound " + i)
 			_player.pause()
 			$("#footer").show()
-		});
-		
-		function descend(counter) {
-
-		    setTimeout(function () {
-		    	_player.src=soundlist[counter];
-				_player.play();
-		        counter += 1;
-		        i = counter
-		        
-		       	var loopcount=counter
-		        if (loopcount > -1 && loopbreak==0) {
-		        	_player.play();
-		        	descend(counter);
-		        } else {
-		        	return;
-		        }
-		    }, 5150);
-		};
+		});		
 	})
 	
 	</script>
