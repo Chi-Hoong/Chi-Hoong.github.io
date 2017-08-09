@@ -1,0 +1,195 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- #BeginTemplate "choiceday.dwt" -->
+	<head>
+		<!-- #BeginEditable "doctitle" -->
+		<title>Valuing Construction Noise in th</title>
+		<!-- #EndEditable -->
+		<link href="css/choicestylestry.css" rel="stylesheet" type="text/css" media="screen">
+		<script src="jquery.min.js"></script>	
+		<link rel="stylesheet" href="jquery-ui.css">
+		<script src="jquery-ui.min.js"></script>
+
+	</head>
+
+	<body>
+		
+	<div id="wrapper">	
+		<div id="content">	
+
+			<h1>Valuing Construction Noise in the Day</h1>
+						
+			<p>Please select the option you prefer the most.</p>
+
+			<div id="time">
+			
+				<img src="images/Picture1.gif">
+			
+				<div class="statusquo">
+					<p>Construction noise without noise reduction measures<br>
+					There is no monthly fee associated with this option</p>
+				</div>
+
+				<!-- #BeginEditable "opts" -->
+
+				<div class="opt1">
+					<p>Construction noise with noise reduction <em>measure 1</em><br>
+					The monthly fee payable with this option is <em>$10</em></p>
+				</div>
+
+				<div class="opt2">
+					<p>Construction noise with noise reduction <em>measure 2</em><br>
+					<p>The monthly fee payable with this option is <em>$15</em></p>
+				</div>
+				
+				<!-- #EndEditable -->
+
+				<div id="pause">
+					<p><a href="pause.html">Click here to pause<br>or terminate the survey.</a></p>
+				</div>
+
+			</div>
+			
+			<br>
+		</div>
+
+		<!-- #BeginEditable "edit" -->
+
+		<div id="edit0">
+			<audio id="background0" src="sounds/noiseh05vol90.wav"></audio>
+			<audio id="option3" src="sounds/noisel05vol70.wav"></audio>
+			<audio id="option4" src="sounds/noiseh15vol60.wav"></audio>
+			
+			<audio id="backgroundend0" src="sounds/noiseh05vol90.wav" loop="loop"></audio>
+			<audio id="option1end0" src="sounds/noisel05vol70.wav" loop="loop"></audio>
+			<audio id="option2end0" src="sounds/noiseh15vol60.wav" loop="loop"></audio>
+		</div>
+
+		<p>The monthly fee payable with this option is <em>$10</em></p>
+
+		<div id="edit">
+			<audio id="background" src="sounds/noisel15vol90.wav"></audio>
+			<audio id="option1" src="sounds/noiseh05vol60.wav"></audio>
+			<audio id="option2" src="sounds/noisel05vol60.wav"></audio>
+			
+			<audio id="backgroundend" src="sounds/noisel15vol90.wav" loop="loop"></audio>
+			<audio id="option1end" src="sounds/noiseh05vol60.wav" loop="loop"></audio>
+			<audio id="option2end" src="sounds/noisel05vol60.wav" loop="loop"></audio>
+		</div>
+
+		<!-- #EndEditable -->
+
+
+		<div id="footer">
+		<!-- #BeginEditable "next" -->
+			<p><a href="choice5v2.html">Next</a></p>
+		<!-- #EndEditable -->
+		</div>
+
+		
+		<script>
+
+		$("document").ready(function() {
+			
+			var audio = document.getElementById("background");
+			var audio1 = document.getElementById("option1");
+			var audio2 = document.getElementById("option2");
+
+			var audioend = document.getElementById("backgroundend");
+			var audio1end = document.getElementById("option1end");
+			var audio2end = document.getElementById("option2end");
+			
+			$(".opt1, .opt2, #footer").hide()
+			audio.play();
+
+			audio.onended=function() {
+				audio1.play();
+
+				$(".statusquo").hide();
+				$(".opt1").show();
+				$(".statusquo").addClass("statusquoend").removeClass("statusquo")
+			}
+			
+			
+			audio1.onended=function() {
+				audio2.play();
+
+				$(".opt1").hide();
+				$(".opt2").show();
+				$(".opt1").addClass("opt1end").removeClass("opt1")
+			}
+			
+			audio2.onended=function() {
+				audioend.play();
+				
+				$(".opt2").addClass("opt2end").removeClass("opt2")
+
+				$(".statusquoend").show();
+				$(".opt1end").show();
+				$(".opt2end").show();
+			}
+		
+			$(document).on("mouseover", ".opt1end", function() {
+				playopt1();
+			})
+			
+			$(document).on("mouseout", ".opt1end", function() {
+				playbg();
+			})
+
+			$(document).on("mouseover", ".opt2end", function() {
+				playopt2();
+			})
+
+			$(document).on("mouseout", ".opt2end", function() {
+				playbg();
+			})
+
+			$(document).on("click", ".statusquoend", function() {
+				$(".statusquoend").addClass("statusquoselect")
+				$(".opt1end").removeClass("opt1select")
+				$(".opt2end").removeClass("opt2select")
+				$("#footer").show()
+			})
+
+			$(document).on("click", ".opt1end", function() {
+				$(".statusquoend").removeClass("statusquoselect")
+				$(".opt1end").addClass("opt1select")
+				$(".opt2end").removeClass("opt2select")
+				$("#footer").show()
+			})
+			
+			$(document).on("click", ".opt2end", function() {
+				$(".statusquoend").removeClass("statusquoselect")
+				$(".opt1end").removeClass("opt1select")
+				$(".opt2end").addClass("opt2select")
+				$("#footer").show()
+			})
+
+			function playbg(){
+				audioend.play();
+				audio1end.pause();
+				audio2end.pause();
+			}
+			
+			function playopt1(){
+				audioend.pause();
+				audio1end.play();
+				audio2end.pause();
+			}
+			
+			function playopt2(){
+				audioend.pause();
+				audio1end.pause();
+				audio2end.play();
+			}
+
+		}) 
+		</script> 
+		
+		
+	</div>
+	</body>
+
+<!-- #EndTemplate -->
+
+</html>
