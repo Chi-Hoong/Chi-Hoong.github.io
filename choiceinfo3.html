@@ -12,7 +12,11 @@
 	<div id="wrapper">	
 		<div id="content">
 			<div id="time"><img src="images/Picture1.gif"></div>
-		
+			
+			<div id="demostart">
+				<p>Press this box to start</p>
+			</div>
+			
 			<div id="demopause">
 				<p>You can proceed to the next page after the sound clip has ended</p>
 				<br>
@@ -23,7 +27,7 @@
 		<br>
 		
 		<div id="footer">
-			<p><a href="choice1.html">Next</a></p>
+			<p><a href="choiceinfo4.html">Next</a></p>
 		</div>
 		
 		<audio id="demo" src="sounds/demo.wav"></audio>
@@ -34,8 +38,15 @@
 		var _player = document.getElementById("demo");
 
 		$("document").ready(function() {
+			$("#demopause").hide()
+		});
+		
+		$("#demostart").mouseup(function() {
+			$("#demostart").hide()
+			$("#demopause").show()
 			_player.play()
 		});
+
 		
 		$("#footer").hide()
 		
