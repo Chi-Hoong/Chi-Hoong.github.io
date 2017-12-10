@@ -105,9 +105,12 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	list-style: none;
 }
 
-
 #content form ul {
 	list-style-type:none
+}
+
+#content ol {
+	margin:15px 30px;
 }
 
 #content ul {

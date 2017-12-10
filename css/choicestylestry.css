@@ -48,8 +48,33 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin:10px 0;
 }
 
+#content #demostart {
+	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
+	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:120px; background-color:#fff;
+}
+
 #content #address p {
 	margin:0 30px;
+}
+
+#content #time table {
+	font-size:80%; margin-left:80px; border-collapse:collapse; position:absolute; top:10px; width:600px; opacity:0.93; background-color:#fff;
+}
+
+#content table tr {
+	border: 1px solid #ddd;
+}
+
+#content th {
+	width:200px; font-weight:bold; background-color:#555; color:#fff; text-align:center; padding:10px 0
+}
+
+#content table td {
+	width:200px; text-align:center; padding:10px 0
+}
+
+#content table tr:hover {
+	background-color:#ddd
 }
 
 #content #time {
@@ -58,108 +83,6 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 
 #content #time img {
 	width:760px;  opacity:0.7;
-}
-
-#content #time .statusquo {
-	float:left; width:500px; position:absolute; top:20px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; line-height:8px; 
-	margin-left:130px; padding: 5px 0 5 0; color:#ddd; background-color:#555; 
-}
-
-#content #time .statusquo p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .opt1 {
-	float:left; width:500px; position:absolute; top:114px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; line-height:8px; 
-	margin-left:130px; padding: 5px 0 5 0; color:#ddd; background-color:#555; 
-}
-
-#content #time .opt1 p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .opt2 {
-	float:left; width:500px; position:absolute; top:208px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; line-height:8px; 
-	margin-left:130px; padding: 5px 0 5 0; color:#ddd; background-color:#555; 
-}
-
-#content #time .opt2 p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .statusquoend {
-	float:left; width:500px; position:absolute; top:20px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#fff; padding: 5px 0 5 0
-}
-
-#content #time .statusquoend:hover {
-	color:#ddd; background-color:#555;
-}
-
-#content #time .statusquoend p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .opt1end {
-	float:left; width:500px; position:absolute; top:114px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#fff; padding: 5px 0 5 0
-}
-
-#content #time .opt1end:hover {
-	color:#ddd; background-color:#555;
-}
-
-#content #time .opt1end p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .opt2end {
-	float:left; width:500px; position:absolute; top:208px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#fff; padding: 5px 0 5 0
-}
-
-#content #time .opt2end:hover {
-	color:#ddd; background-color:#555;
-}
-
-#content #time .opt2end p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .statusquoselect {
-	float:left; width:500px; position:absolute; top:20px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#bbb; padding: 5px 0 5 0
-}
-
-#content #time .statusquoselect p {
-	margin: 5px 0 5 0;
-}
-
-#content #time .opt1select {
-	float:left; width:500px; position:absolute; top:114px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#bbb; padding: 5px 0 5 0
-}
-
-#content #time .opt1select:hover {
-	color:#ddd; background-color:#555;
-}
-
-#content #time .opt2select {
-	float:left; width:500px; position:absolute; top:208px; text-align:center; opacity:0.93;
-	border: 3px #555 solid; text-decoration:none; font-weight:normal; color:#000; line-height:8px; 
-	margin-left:130px; background-color:#bbb; padding: 5px 0 5 0
-}
-
-#content #time .opt2select p {
-	margin: 5px 0 5 0;
 }
 
 #content #time em {
@@ -176,7 +99,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 
 #content #pause {
 	margin-left:277px; float:left; width:200px; border:3px #FF0000 solid; text-align:center; opacity:0.93;
-	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:346px; background-color:#fff;
+	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:450px; background-color:#fff;
 }
 
 #content #pause a {
@@ -185,7 +108,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 
 
 #footer p {
-	font-size:24px; margins:30px; float:right; 
+	font-size:24px; margin:30px; float:right; 
 }
 
 #footer p a {

@@ -52,6 +52,10 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin:0 30px;
 }
 
+#content #time {
+	position:relative;
+}
+
 #content #time img {
 	width:760px;  opacity: 0.7;
 }
@@ -76,9 +80,14 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	background-color:#ddd
 }
 
+#content #demostart {
+	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
+	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:120px; background-color:#fff;
+}
+
 #content #demopause {
 	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
-	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:20%; background-color:#fff;
+	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:120px; background-color:#fff;
 }
 
 #content #demopause a {
