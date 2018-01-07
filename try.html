@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Survey on Construction Noise</title>
+	<link href="css/choicestylestry.css" rel="stylesheet" type="text/css" media="screen">
+	<script src="jquery.min.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+  <div id="press"><p>press here</p></div>
+
+  <audio id="player"></audio>
+
+  <script>
+  var _player = document.getElementById("player");
+
+  var soundlist = ["sounds/noisel15vol90.wav",
+  "sounds/test1000_70db.wav",
+  "sounds/noisel05vol60.wav"]
+
+  $("#press").mouseup(function() {
+
+    i=0
+    _player.src=soundlist[i];
+    _player.play()
+
+    do {
+
+      for (var i = 1; i < 3; i++) {
+        (function (i) {
+          setTimeout(function () {
+            console.log(i)
+            _player.src=soundlist[i];
+            _player.play()
+          }, 10100*i);
+        })(i);
+      };
+
+    } while(i<3);
+
+
+
+
+  });
+
+  </script>
+</body>
+</html>
