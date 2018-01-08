@@ -1,0 +1,197 @@
+<hmtl>
+  <head>
+    <title>Survey on Construction Noise</title>
+    <link href="css/choicestylestry.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <div id="content">
+
+        <div id="demostart">
+          <p>Press this box to start</p>
+        </div>
+
+        <div id="time"><img src="images/Picture1.gif">
+
+        <table>
+      		<tr>
+      			<th>Policy</th>
+      			<th>Permitted Construction Timing</th>
+      			<th>No Work Rule</th>
+      			<th>Change in Construction Duration</th>
+            <th>Construction Noise</th>
+      			<th>One-off Charge</th>
+      		</tr>
+
+      		<tbody class="statusquo">
+      		<tr>
+      			<td>Status Quo</td>
+      			<td>7am-7pm</td>
+      			<td>
+              <ul>
+                Work prohibited on:
+                <li>Sundays</li>
+                <li>Public Holidays</li>
+              </ul>
+            </td>
+      			<td>No Change</td>
+            <td>
+              <p class="statusquoplay">Play</p>
+              <p class="statusquopause">Pause</p>
+            </td>
+      			<td>$0</td>
+      		</tr>
+      		</tbody>
+
+      		<tbody class="opt1">
+      		<tr>
+      			<td>1</td>
+      			<td>8am-6pm</td>
+            <td>
+              <ul>
+                Work prohibited on:
+                <li>Saturdays</li>
+                <li>Sundays</li>
+                <li>Public Holidays</li>
+              </ul>
+            </td>
+            <td>Increase by 3 months</td>
+            <td>
+              <p class="opt1play">Play</p>
+              <p class="opt1pause">Pause</p>
+            </td>
+      			<td>$100</td>
+      		</tr>
+      		</tbody>
+
+      		<tbody class="opt2">
+      		<tr>
+      			<td>2</td>
+      			<td>9am-5pm</td>
+            <td>
+              <ul>
+                Work prohibited on:
+                <li>Saturdays</li>
+                <li>Sundays</li>
+                <li>Eve of Public Holidays</li>
+                <li>Public Holidays</li>
+              </ul>
+            </td>
+      			<td>Increase by 12 months</td>
+            <td>
+              <p class="opt2play">Play</p>
+              <p class="opt2pause">Pause</p>
+            </td>
+      			<td>$200</td>
+      		</tr>
+      		</tbody>
+
+      	</table>
+      </div>
+
+      <div id="pause">
+  			<p><a href="pause.html">Click here to pause<br>or terminate the survey.</a></p>
+  		</div>
+
+      <audio id="player"></audio>
+      <audio id="choices" loop="loop"></audio>
+
+      <script>
+      	$("document").ready(function() {
+      		$("#time").hide()
+      	});
+
+        var _player = document.getElementById("player");
+        var _choices = document.getElementById("choices");
+
+        var soundlist = ["sounds/noisel15vol90.wav",
+        "sounds/noiseh05vol60.wav",
+        "sounds/noisel05vol60.wav"]
+
+        $("#demostart").mouseup(function() {
+          $("#demostart").hide()
+          $("#time").show()
+
+          var i=0
+          var j=i
+          _player.src=soundlist[i];
+          _player.play()
+          $(".statusquo").addClass("statusquodemo")
+
+          for (var i = 1; i < 3; i++) {
+            (function (i) {
+              setTimeout(function () {
+                if (i==1) {
+                  console.log(i)
+                  _player.src=soundlist[i];
+                  _player.play()
+                  $(".statusquodemo").removeClass("statusquodemo")
+                  $(".opt1").addClass("opt1demo")
+                } else if (i==2) {
+                  console.log(i)
+                  _player.src=soundlist[i];
+                  _player.play()
+                  $(".opt1demo").removeClass("opt1demo")
+                  $(".opt2").addClass("opt2demo")
+                }
+                j=i
+              }, 10100*i);
+            })(i);
+          };
+
+          setTimeout(function () {
+            console.log("try")
+            console.log(j)
+            $(".opt2demo").removeClass("opt2demo")
+
+            $(".statusquoplay").mouseup(function() {
+              _choices.src=soundlist[0];
+              _choices.play()
+              $(".statusquo").addClass("statusquodemo")
+              $(".opt1demo").removeClass("opt1demo")
+              $(".opt2demo").removeClass("opt2demo")
+            })
+
+            $(".opt1play").mouseup(function() {
+              _choices.src=soundlist[1];
+              _choices.play()
+              $(".opt1").addClass("opt1demo")
+              $(".statusquodemo").removeClass("statusquodemo")
+              $(".opt2demo").removeClass("opt2demo")
+            })
+
+            $(".opt2play").mouseup(function() {
+              _choices.src=soundlist[2];
+              _choices.play()
+              $(".opt2").addClass("opt2demo")
+              $(".opt1demo").removeClass("opt1demo")
+              $(".statusquodemo").removeClass("statusquodemo")
+            })
+
+            $(".statusquopause").mouseup(function() {
+              _choices.pause()
+              $(".statusquodemo").removeClass("statusquodemo")
+            })
+
+            $(".opt1pause").mouseup(function() {
+              _choices.pause()
+              $(".opt1demo").removeClass("opt1demo")
+            })
+
+            $(".opt2pause").mouseup(function() {
+              _choices.pause()
+              $(".opt2demo").removeClass("opt2demo")
+            })
+
+          }, 30400);
+
+        });
+
+      </script>
+    </body>
+  </html>
