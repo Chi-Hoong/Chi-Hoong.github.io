@@ -1,0 +1,10 @@
+<hmtl>
+  <head>
+    <title>Survey on Construction Noise</title>
+    <link href="css/choicestylestry.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-ui.min.js"></script>
+  </head>
+
+  <body>

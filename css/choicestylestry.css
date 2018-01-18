@@ -10,7 +10,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.5rem; font-weight: 400;
+	font: 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.1rem; font-weight: 400;
 	vertical-align: baseline;
 }
 
@@ -37,17 +37,20 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin:10px 0;
 }
 
-#content #demostart {
+#content .demostart {
 	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
 	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:120px; background-color:#fff;
 }
 
-#content #address p {
-	margin:0 30px;
-}
-
-#content #time table {
-	font-size:70%; margin-left:40px; border-collapse:collapse; position:absolute; top:10px; width:680px; opacity:0.93; background-color:#fff;
+#content .time table {
+	font-size:70%;
+	margin-left:40px;
+	border-collapse:collapse;
+	position:absolute;
+	top:10px;
+	width:680px;
+	opacity:0.93;
+	background-color:#fff;
 }
 
 #content table tr {
@@ -55,15 +58,24 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 #content th {
-	line-height: 1.1; font-weight:bold; background-color:#555; color:#fff; text-align:center; padding:3px 0
+	line-height: 1.1;
+	font-weight:bold;
+	background-color:#555;
+	color:#fff;
+	text-align:center;
+	padding:3px 0
 }
 
 #content table td {
-	line-height: 1.1; padding:3px 0; text-align:center;
+	text-align:center;
 }
 
 #content table td ul {
 	list-style-position: inside; text-align:left;
+}
+
+#content table td form {
+	padding-top: 7px;
 }
 
 #content .statusquodemo {
@@ -90,45 +102,45 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	font-weight: bold;
 }
 
-#content #time {
+#content .time {
 	position:relative;
 }
 
-#content #time img {
+#content .time img {
 	width:760px;  opacity:0.7;
 }
 
-#content #time em {
+#content .time em {
 	font-weight:bold; font-style:normal; text-decoration:underline;
 }
-#content #demopause {
+#content .demopause {
 	margin-left:80px; float:left; width:600px; padding:10px; border: 3px #FF0000 solid; text-align:center; opacity:0.93;
 	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:50px; background-color:#fff;
 }
 
-#content #demopause a {
+#content .demopause a {
 	color:#FF0000;
 }
 
-#content #pause {
+#content .pause {
 	margin-left:277px; float:left; width:200px; border:3px #FF0000 solid; text-align:center; opacity:0.93;
 	text-decoration:none; font-weight:normal; color:#000; position:absolute; top:450px; background-color:#fff;
 }
 
-#content #pause a {
+#content .pause a {
 	text-decoration:none; font-weight:normal; color:#FF0000
 }
 
 
-#footer p {
+.footer p {
 	font-size:24px; margin:30px; float:right;
 }
 
-#footer p a {
+.footer p a {
 	color:#000; padding:20px; background-color:#ddd;
 }
 
-#footer p a:hover {
+.footer p a:hover {
 	color:#fff; background-color:#333; padding:20px;
 
 }
